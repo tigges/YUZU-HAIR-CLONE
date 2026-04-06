@@ -10,13 +10,10 @@ function setMenuVisible(visible) {
   panelArea.style.display = visible ? "" : "none";
 }
 
-function showSingleFrame(title, subtitle) {
+function showSingleFrame() {
   mainContent.innerHTML = `
     <section class="single-frame-wrap">
-      <article class="single-frame-card">
-        <h1>${title}</h1>
-        <p>${subtitle}</p>
-      </article>
+      <article class="single-frame-card" aria-label="Empty concept frame"></article>
     </section>
   `;
 }
@@ -265,10 +262,13 @@ conceptButtons.forEach((button) => {
     setMenuVisible(false);
 
     if (selectedConcept === "b") {
-      showSingleFrame("B - YUZU V1", "This frame is intentionally empty for now.");
+      showSingleFrame();
       return;
     }
 
-    showSingleFrame("C - Future", "This frame is intentionally empty for now.");
+    showSingleFrame();
   });
 });
+
+restoreMainLayout();
+setMenuVisible(true);
