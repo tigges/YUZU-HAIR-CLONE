@@ -3,101 +3,295 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YUZU V1 Workspace</title>
+    <title>Yuzu Hair & Beauty | YUZU V1</title>
     <meta
       name="description"
-      content="Main workspace for developing YUZU V1 at root."
+      content="YUZU V1: modern, generous, conversion-focused salon homepage for Yuzu Hair & Beauty."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --bg: #f3f1ea;
-        --ink: #1c2d24;
-        --soft: #4f5f58;
-        --line: #d8d2c3;
-        --accent: #d8b66d;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: var(--bg);
-        color: var(--ink);
-        font-family: "Inter", Arial, sans-serif;
-      }
-
-      .shell {
-        width: min(900px, 92vw);
-        border: 1px solid var(--line);
-        background: #fcfbf8;
-        padding: clamp(1.2rem, 2vw, 2rem);
-      }
-
-      h1 {
-        margin: 0 0 0.4rem;
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: clamp(2rem, 4.2vw, 3.2rem);
-        line-height: 1.1;
-      }
-
-      p {
-        margin: 0.35rem 0;
-        color: var(--soft);
-      }
-
-      .badge {
-        display: inline-block;
-        margin-top: 0.75rem;
-        border: 1px solid var(--accent);
-        color: #6d5628;
-        background: #fff;
-        padding: 0.35rem 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-size: 0.72rem;
-      }
-
-      .links {
-        margin-top: 1rem;
-        display: flex;
-        gap: 0.7rem;
-        flex-wrap: wrap;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid var(--line);
-        padding: 0.55rem 0.75rem;
-        font-size: 0.88rem;
-        background: #fff;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="shell">
-      <h1>YUZU V1 — Main Workspace</h1>
-      <p>
-        Root URL now reserved for building the new YUZU V1 site architecture.
-      </p>
-      <p>
-        Existing planning frame moved to <code>/concept</code> for reference.
-      </p>
-      <span class="badge">Fast iteration mode</span>
-      <div class="links">
-        <a href="/concept/">Open Concept Frame</a>
+    <div class="patch-alert">
+      <div class="container patch-inner">
+        <p>
+          Mandatory patch testing is required before all colour services.
+          <a
+            href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_5ad90785107649c5a308c57cf4f4e75f.pdf"
+            target="_blank"
+            rel="noreferrer"
+            >View policy</a
+          >
+        </p>
+        <a class="book-mini" href="https://phorest.com/book/salons/yuzuhairandbeauty" target="_blank" rel="noreferrer"
+          >Book now</a
+        >
       </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="logo-link" aria-label="Yuzu Hair home">
+          <img
+            src="https://static.wixstatic.com/media/4ea19e_3f6bb00813724c3ca3590a1d574e1172~mv2.png/v1/fill/w_234,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0.png"
+            alt="Yuzu Hair"
+          />
+        </a>
+        <nav class="main-nav">
+          <a href="#top">Home</a>
+          <a href="#services">Services</a>
+          <a href="#prices">Prices</a>
+          <a href="#offers">Offers</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <a class="book-link" href="https://phorest.com/book/salons/yuzuhairandbeauty" target="_blank" rel="noreferrer"
+            >Book</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <article class="hero-copy">
+            <p class="eyebrow">Ealing Broadway</p>
+            <h1>Japanese-inspired precision for modern London hair.</h1>
+            <p>
+              A calm luxury salon experience with expert cuts, colour, and care
+              for all textures and styles.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://phorest.com/book/salons/yuzuhairandbeauty" target="_blank" rel="noreferrer"
+                >Book online</a
+              >
+              <a class="btn btn-outline" href="#services">Prices & services</a>
+            </div>
+          </article>
+          <article class="hero-card">
+            <h2>Plan your visit</h2>
+            <ul>
+              <li>Tuesday - Friday: 10am to 8pm</li>
+              <li>Saturday: 9am to 6pm</li>
+              <li>Monday & Sunday: Closed</li>
+            </ul>
+            <p>22 The Green, Ealing, London W5 5DA</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Services at a glance</h2>
+            <p>Clear categories, transparent starting prices, and typical timing.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Cut & Blowdry</h3>
+              <p>Precision cuts and polished finishing.</p>
+              <p><strong>From £65</strong> · 60 mins</p>
+            </article>
+            <article class="service-card">
+              <h3>Colour</h3>
+              <p>Roots, refreshes, and full-colour transformation.</p>
+              <p><strong>From £80</strong> · 90 mins</p>
+            </article>
+            <article class="service-card">
+              <h3>Balayage</h3>
+              <p>Soft dimensional blondes and bespoke blending.</p>
+              <p><strong>From £150</strong> · 150 mins</p>
+            </article>
+            <article class="service-card">
+              <h3>Treatments</h3>
+              <p>Repair, shine, scalp and smoothing support.</p>
+              <p><strong>From £35</strong> · 30 mins</p>
+            </article>
+            <article class="service-card">
+              <h3>Extensions</h3>
+              <p>Length, volume, and integrated consultations.</p>
+              <p><strong>From £180</strong> · 120 mins</p>
+            </article>
+            <article class="service-card">
+              <h3>Styling</h3>
+              <p>Event-ready looks and premium blowdries.</p>
+              <p><strong>From £45</strong> · 45 mins</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="prices">
+        <div class="container booking-grid">
+          <article class="booking-card">
+            <h2>Booking confidence</h2>
+            <ul>
+              <li>Online booking is fastest for live availability.</li>
+              <li>Consultation-first approach before major colour changes.</li>
+              <li>Patch testing required for all colour services.</li>
+              <li>Cancel or reschedule with notice to protect your slot.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://phorest.com/book/salons/yuzuhairandbeauty" target="_blank" rel="noreferrer"
+                >Book appointment</a
+              >
+              <a class="btn btn-outline" href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_77e8f05ffc1d4d6192fd0cda1dfc6ad2.pdf" target="_blank" rel="noreferrer"
+                >Full price list PDF</a
+              >
+            </div>
+          </article>
+          <article class="booking-card">
+            <h2>Why Yuzu</h2>
+            <ul>
+              <li>Japanese-inspired precision and modern styling craft.</li>
+              <li>Inclusive expertise across textures, tones, and lengths.</li>
+              <li>Care-first service from consultation to aftercare.</li>
+              <li>Friendly, calm atmosphere in central Ealing.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="offers">
+        <div class="container">
+          <div class="section-head">
+            <h2>Latest transformations</h2>
+            <p>Results-first showcase and social proof from the Yuzu community.</p>
+          </div>
+          <div class="gallery-grid">
+            <a href="https://www.instagram.com/p/DWhEa09jImn/" target="_blank" rel="noreferrer">
+              <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/661222522_18400255441146423_1010490116130216137_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gHVJWgaBBEOdfEbVz7y4TxtAQHb9x8Hp_yaEIF-vX4pi28PYLTD4EcEIQw4LH2bnLo&_nc_ohc=K3RBkSyR76kQ7kNvwFeSoBJ&_nc_gid=OW5CwcaH05l5MTKM0Ez49g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af0Q75sck9ul-X-m7790REVm-V6mjnQIvoJPe1E8iQh2aA&oe=69D95410&_nc_sid=8b3546" alt="Yuzu recent look 1" />
+            </a>
+            <a href="https://www.instagram.com/p/DWhDiM2DLZO/" target="_blank" rel="noreferrer">
+              <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/658907506_18400254004146423_1092259357465230191_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gHVJWgaBBEOdfEbVz7y4TxtAQHb9x8Hp_yaEIF-vX4pi28PYLTD4EcEIQw4LH2bnLo&_nc_ohc=FeumQpoGpYcQ7kNvwG2fv3G&_nc_gid=OW5CwcaH05l5MTKM0Ez49g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af2Ppz9bczin-w9oXQBZ2Rwd2ZCJk6tKcMR2KBeHwmhGog&oe=69D9390F&_nc_sid=8b3546" alt="Yuzu recent look 2" />
+            </a>
+            <a href="https://www.instagram.com/p/DWhDWkJjMmZ/" target="_blank" rel="noreferrer">
+              <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/657762879_18400253584146423_4472030672198313690_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gHVJWgaBBEOdfEbVz7y4TxtAQHb9x8Hp_yaEIF-vX4pi28PYLTD4EcEIQw4LH2bnLo&_nc_ohc=im5JkPK9UUUQ7kNvwE0VN94&_nc_gid=OW5CwcaH05l5MTKM0Ez49g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af3bZLb76RDU2-05im4bfOuSZxvN57zbZDJJQ177QnDOnw&oe=69D93FF1&_nc_sid=8b3546" alt="Yuzu recent look 3" />
+            </a>
+          </div>
+          <p class="gallery-link">
+            <a href="https://www.instagram.com/yuzuhairandbeauty/" target="_blank" rel="noreferrer"
+              >See more on Instagram</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="team">
+        <div class="container">
+          <div class="section-head">
+            <h2>Specialist team highlights</h2>
+            <p>Trusted experts for precision cuts, colour, and healthy long-term hair.</p>
+          </div>
+          <div class="team-grid">
+            <article class="team-card">
+              <h3>Senior Stylist Team</h3>
+              <p>Specialism: precision cuts, editorial finishing.</p>
+            </article>
+            <article class="team-card">
+              <h3>Colour Specialists</h3>
+              <p>Specialism: balayage, blondes, colour correction.</p>
+            </article>
+            <article class="team-card">
+              <h3>Texture & Care Stylists</h3>
+              <p>Specialism: curls, smoothing, keratin and repair plans.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reviews">
+        <div class="container">
+          <div class="section-head">
+            <h2>Client reviews</h2>
+            <p>What guests say after their Yuzu experience.</p>
+          </div>
+          <div class="review-grid" id="review-grid">
+            <article class="review-card active">
+              <p>
+                “The team listened, advised clearly, and the final look was exactly
+                what I wanted.”
+              </p>
+              <span>Google review</span>
+            </article>
+            <article class="review-card">
+              <p>
+                “Colour and cut were both incredible. Friendly atmosphere and very
+                professional.”
+              </p>
+              <span>Instagram feedback</span>
+            </article>
+            <article class="review-card">
+              <p>
+                “Best appointment in a long time. Great consultation and confidence
+                from start to finish.”
+              </p>
+              <span>Client message</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact-grid">
+          <article class="contact-card">
+            <h2>Contact & location</h2>
+            <p>
+              <a href="tel:+442088402244">020 8840 2244</a> ·
+              <a href="mailto:info@yuzuhairandbeauty.co.uk">info@yuzuhairandbeauty.co.uk</a>
+            </p>
+            <p>22 The Green, Ealing, London W5 5DA</p>
+            <p>
+              2-minute walk from Ealing Broadway station.
+              <a href="https://maps.google.com/?q=22+The+Green+Ealing+W5+5DA" target="_blank" rel="noreferrer"
+                >Open map</a
+              >
+            </p>
+            <div class="contact-actions">
+              <a href="https://www.facebook.com/YUZUHairandBeauty/" target="_blank" rel="noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/yuzuhairandbeauty/" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="/concept/">Concept frame</a>
+            </div>
+          </article>
+          <article class="contact-card">
+            <h2>Quick message</h2>
+            <form id="contact-form-v1">
+              <label>
+                Name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Send</button>
+              <p id="v1-submit-message" class="submit-message">
+                Thanks. We will get back to you shortly.
+              </p>
+            </form>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <a
+      class="sticky-book"
+      href="https://phorest.com/book/salons/yuzuhairandbeauty"
+      target="_blank"
+      rel="noreferrer"
+      >Book online</a
+    >
+
+    <script src="./script.js"></script>
   </body>
 </html>
