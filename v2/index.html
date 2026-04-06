@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzu Hair & Beauty | Midnight Edition</title>
+    <meta
+      name="description"
+      content="A dramatic dark-mode concept for Yuzu Hair with premium visuals and clear booking flow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0d12;
+        --panel: #121722;
+        --soft: #181f2c;
+        --ink: #edf2ff;
+        --muted: #aeb9d2;
+        --line: #263049;
+        --accent: #d2b57e;
+        --accent-2: #f4deba;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", Arial, sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 80% 0%, #1e2940, var(--bg) 45%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(1160px, 92vw);
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(11, 13, 18, 0.92);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(6px);
+      }
+
+      .topbar-inner {
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        width: 136px;
+      }
+
+      .topbar nav {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .topbar nav a {
+        text-decoration: none;
+        letter-spacing: 0.09em;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 78vh;
+        background: linear-gradient(rgba(9, 10, 13, 0.62), rgba(9, 10, 13, 0.8)),
+          url("https://static.wixstatic.com/media/11062b_404969162f164bf79cac18475881d4a2~mv2.jpg/v1/fill/w_1920,h_980,al_c,q_85,enc_avif,quality_auto/11062b_404969162f164bf79cac18475881d4a2~mv2.jpg")
+            center / cover;
+        display: grid;
+        align-items: center;
+      }
+
+      .hero-inner {
+        display: grid;
+        gap: 1.2rem;
+        max-width: 680px;
+      }
+
+      .chip {
+        width: fit-content;
+        padding: 0.45rem 0.72rem;
+        border: 1px solid rgba(210, 181, 126, 0.5);
+        color: var(--accent-2);
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-size: 0.74rem;
+        background: rgba(18, 23, 34, 0.65);
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-family: "Playfair Display", Georgia, serif;
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 6vw, 4.6rem);
+        line-height: 1.02;
+      }
+
+      .hero p {
+        margin: 0;
+        color: #dae4f8;
+        max-width: 60ch;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 0.85rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        text-decoration: none;
+        padding: 0.82rem 1.08rem;
+        border-radius: 0;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        font-size: 0.77rem;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: #1c1a16;
+        border: 1px solid var(--accent);
+      }
+
+      .btn-ghost {
+        border: 1px solid #69789e;
+        color: #d8e0f2;
+        background: rgba(18, 23, 34, 0.6);
+      }
+
+      .grid {
+        padding: 4.2rem 0;
+        display: grid;
+        gap: 1.1rem;
+        grid-template-columns: 1.25fr 1fr;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 1.3rem;
+      }
+
+      .panel h2 {
+        font-size: clamp(1.6rem, 3vw, 2.6rem);
+        margin-bottom: 0.6rem;
+      }
+
+      .panel p {
+        margin-top: 0;
+        color: var(--muted);
+      }
+
+      .panel ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        color: var(--muted);
+      }
+
+      .offers {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .offer-card {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        padding: 1rem;
+      }
+
+      .offer-card h3 {
+        margin: 0 0 0.35rem;
+        font-family: "Playfair Display", serif;
+      }
+
+      .offer-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        padding: 1.2rem 0 1.4rem;
+        color: #8fa0c4;
+        font-size: 0.88rem;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar-inner {
+          flex-direction: column;
+          justify-content: center;
+          min-height: 96px;
+          padding: 0.6rem 0;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .topbar nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <img
+          class="logo"
+          src="https://static.wixstatic.com/media/4ea19e_3f6bb00813724c3ca3590a1d574e1172~mv2.png/v1/fill/w_234,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0.png"
+          alt="Yuzu Hair"
+        />
+        <nav>
+          <a href="#about">About</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#offers">Offers</a>
+          <a href="#visit">Visit</a>
+          <a href="https://phorest.com/book/salons/yuzuhairandbeauty" target="_blank" rel="noreferrer">Book</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <span class="chip">Evening & Weekend Specialists</span>
+        <h1>Dark Luxury. Precise Styling. Yuzu, Reimagined.</h1>
+        <p>
+          A high-contrast, conversion-focused concept site that keeps Yuzu’s
+          elegant voice while making calls-to-action and service discovery
+          clearer for first-time visitors.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://phorest.com/book/salons/yuzuhairandbeauty" target="_blank" rel="noreferrer">Book online now</a>
+          <a class="btn btn-ghost" href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_77e8f05ffc1d4d6192fd0cda1dfc6ad2.pdf" target="_blank" rel="noreferrer">View price list</a>
+        </div>
+      </div>
+    </section>
+
+    <main class="wrap grid">
+      <article id="about" class="panel">
+        <h2>About Yuzu Hair</h2>
+        <p>
+          Welcome to Yuzu Hair, where tradition meets trend in the art of hair
+          care. Inspired by Japanese elegance and located in Ealing Broadway,
+          the salon blends contemporary execution with timeless style.
+        </p>
+        <p>
+          Mandatory patch testing applies before all colour services for both
+          existing and new clients.
+        </p>
+        <a class="btn btn-ghost" href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_5ad90785107649c5a308c57cf4f4e75f.pdf" target="_blank" rel="noreferrer">Read patch policy</a>
+      </article>
+
+      <aside id="visit" class="panel">
+        <h2>Visit & Hours</h2>
+        <ul>
+          <li>Tuesday - Friday: 10am to 8pm</li>
+          <li>Saturday: 9am to 6pm</li>
+          <li>Monday & Sunday: CLOSED</li>
+          <li>22 The Green, Ealing, London W5 5DA</li>
+        </ul>
+      </aside>
+
+      <section id="offers" class="panel">
+        <h2>Offers & Team</h2>
+        <div class="offers">
+          <div class="offer-card">
+            <h3>Exclusive Offers</h3>
+            <p>Seasonal campaign page for regular guests and first-time visitors.</p>
+            <a class="btn btn-ghost" href="https://www.yuzuhairandbeauty.london/o-f-f-e-r-s-1" target="_blank" rel="noreferrer">Open offers</a>
+          </div>
+          <div class="offer-card">
+            <h3>Join Our Team</h3>
+            <p>Current opportunities and recruitment information from Yuzu.</p>
+            <a class="btn btn-ghost" href="https://www.yuzuhairandbeauty.london/items" target="_blank" rel="noreferrer">See roles</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="panel">
+        <h2>Price List & Social</h2>
+        <p>Download the current service menu and follow for daily transformations.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_77e8f05ffc1d4d6192fd0cda1dfc6ad2.pdf" target="_blank" rel="noreferrer">Download prices</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/yuzuhairandbeauty/" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="btn btn-ghost" href="https://www.facebook.com/YUZUHairandBeauty/" target="_blank" rel="noreferrer">Facebook</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span>&copy; Yuzu Hair &amp; Beauty</span>
+        <span>Premium dark variation concept (v2)</span>
+      </div>
+    </footer>
+  </body>
+</html>

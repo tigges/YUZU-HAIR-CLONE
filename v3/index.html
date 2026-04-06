@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzu Hair | Variation 3</title>
+    <meta
+      name="description"
+      content="Variation 3: calm, minimalist Yuzu Hair one-page redesign."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f4f1ea;
+        --rice: #fbf8f2;
+        --ink: #202723;
+        --muted: #495650;
+        --line: #d8d1c0;
+        --accent: #98b0a2;
+        --accent-strong: #5f8671;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(1040px, 92vw);
+        margin: 0 auto;
+      }
+
+      .top {
+        padding: 1.1rem 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .top-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo {
+        width: 140px;
+      }
+
+      .links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .links a {
+        font-size: 0.8rem;
+        letter-spacing: 0.16em;
+        text-decoration: none;
+      }
+
+      .hero {
+        padding: 3.2rem 0;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        object-fit: cover;
+        border-radius: 2px;
+      }
+
+      .hero-copy {
+        background: var(--rice);
+        border: 1px solid var(--line);
+        padding: clamp(1.5rem, 3vw, 2.2rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hero-copy h1 {
+        margin: 0 0 0.8rem;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.9rem, 4vw, 3.1rem);
+        line-height: 1.15;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 0.72rem 1rem;
+      }
+
+      .btn-main {
+        background: var(--accent-strong);
+        border: 1px solid var(--accent-strong);
+        color: #fff;
+      }
+
+      .btn-ghost {
+        border: 1px solid var(--line);
+      }
+
+      .section {
+        padding: 2.4rem 0;
+      }
+
+      h2 {
+        margin: 0 0 0.8rem;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+      }
+
+      .panel {
+        background: var(--rice);
+        border: 1px solid var(--line);
+        padding: 1.25rem;
+      }
+
+      .notice {
+        border-left: 4px solid var(--accent);
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .small {
+        font-size: 0.95rem;
+      }
+
+      .hours {
+        list-style: none;
+        padding: 0;
+        margin: 0.7rem 0 0;
+      }
+
+      .hours li {
+        padding: 0.2rem 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .contact-form label {
+        display: block;
+        font-size: 0.88rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        border: 1px solid #c9c3b5;
+        background: #fff;
+        padding: 0.62rem;
+        margin-top: 0.3rem;
+        font: inherit;
+      }
+
+      .submit-message {
+        display: none;
+        margin-top: 0.8rem;
+        color: #315746;
+        font-weight: 600;
+      }
+
+      .submit-message.visible {
+        display: block;
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        padding: 1.3rem 0;
+        font-size: 0.9rem;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .split,
+        .cards,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top-inner">
+        <img
+          class="logo"
+          src="https://static.wixstatic.com/media/4ea19e_3f6bb00813724c3ca3590a1d574e1172~mv2.png/v1/fill/w_234,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0.png"
+          alt="Yuzu Hair logo"
+        />
+        <nav class="links">
+          <a href="#welcome">WELCOME</a>
+          <a href="#services">SERVICES</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <img
+            src="https://static.wixstatic.com/media/11062b_404969162f164bf79cac18475881d4a2~mv2.jpg/v1/fill/w_1920,h_980,al_c,q_85,enc_avif,quality_auto/11062b_404969162f164bf79cac18475881d4a2~mv2.jpg"
+            alt="Yuzu Hair front hero"
+          />
+          <article class="hero-copy">
+            <h1>Quiet luxury for modern hair care.</h1>
+            <p class="muted">
+              A minimalist interpretation of Yuzu Hair, built for clarity and
+              calm while keeping every key customer action visible.
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-main"
+                href="https://phorest.com/book/salons/yuzuhairandbeauty"
+                target="_blank"
+                rel="noreferrer"
+                >Book online</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_77e8f05ffc1d4d6192fd0cda1dfc6ad2.pdf"
+                target="_blank"
+                rel="noreferrer"
+                >Price list</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="welcome" class="section">
+        <div class="wrap split">
+          <article class="panel">
+            <h2>Welcome</h2>
+            <p class="small">
+              Welcome to Yuzu Hair, where tradition meets trend in the art of
+              hair care. Inspired by Japanese elegance, our stylists blend
+              modern technique with timeless precision in Ealing Broadway.
+            </p>
+          </article>
+          <article class="panel notice">
+            <h2>Mandatory patch testing</h2>
+            <p class="small">
+              For all colour services we now require patch testing for both new
+              and existing clients.
+            </p>
+            <a
+              class="btn btn-ghost"
+              href="https://www.yuzuhairandbeauty.london/_files/ugd/4ea19e_5ad90785107649c5a308c57cf4f4e75f.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >Read policy</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="wrap cards">
+          <article class="panel">
+            <h2>Offers</h2>
+            <p class="small">
+              Seasonal offers are available for returning and new guests.
+            </p>
+            <a
+              class="btn btn-ghost"
+              href="https://www.yuzuhairandbeauty.london/o-f-f-e-r-s-1"
+              target="_blank"
+              rel="noreferrer"
+              >See offers</a
+            >
+          </article>
+          <article class="panel">
+            <h2>Join our team</h2>
+            <p class="small">
+              We are always interested in talented stylists and assistants.
+            </p>
+            <a
+              class="btn btn-ghost"
+              href="https://www.yuzuhairandbeauty.london/items"
+              target="_blank"
+              rel="noreferrer"
+              >Careers</a
+            >
+          </article>
+          <article class="panel">
+            <h2>Hours</h2>
+            <ul class="hours small">
+              <li>Tuesday - Friday: 10am to 8pm</li>
+              <li>Saturday: 9am to 6pm</li>
+              <li>Monday &amp; Sunday: closed</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="wrap contact-grid">
+          <article class="panel">
+            <h2>Visit</h2>
+            <p class="small">22 The Green, Ealing, London W5 5DA</p>
+            <p class="small">Instagram: @yuzuhairandbeauty</p>
+          </article>
+          <article class="panel">
+            <h2>Contact</h2>
+            <form class="contact-form" id="contact-form-v3">
+              <label>
+                Name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button class="btn btn-main" type="submit">Send</button>
+              <p class="submit-message" id="submit-message-v3">
+                Thanks for your message.
+              </p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span>&copy; Yuzu Hair &amp; Beauty</span>
+        <span>Variation 3</span>
+      </div>
+    </footer>
+
+    <script>
+      const formV3 = document.getElementById("contact-form-v3");
+      const messageV3 = document.getElementById("submit-message-v3");
+
+      formV3.addEventListener("submit", function (event) {
+        event.preventDefault();
+        formV3.reset();
+        messageV3.classList.add("visible");
+      });
+    </script>
+  </body>
+</html>
