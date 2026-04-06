@@ -1,0 +1,17 @@
+{
+  "website_mirror": {
+    "path": "/workspace/archive/yuzu_site",
+    "files": 8,
+    "bytes": 4706179
+  },
+  "website_extra_assets": {
+    "path": "/workspace/archive/yuzu_site_extra_assets",
+    "files": 237,
+    "bytes": 105793276
+  },
+  "instagram_archive": {
+    "path": "/workspace/archive/instagram_yuzu",
+    "files": 17,
+    "bytes": 1844574
+  }
+}

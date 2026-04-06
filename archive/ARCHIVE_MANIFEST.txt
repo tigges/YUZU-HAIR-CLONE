@@ -1,0 +1,30 @@
+YUZU ASSET ARCHIVE MANIFEST
+
+Source website: https://www.yuzuhairandbeauty.london/
+Source instagram: https://www.instagram.com/yuzuhairandbeauty/?hl=en
+
+ARCHIVE LOCATIONS
+- Website mirror: /workspace/archive/yuzu_site
+- Website extra assets: /workspace/archive/yuzu_site_extra_assets
+- Instagram archive: /workspace/archive/instagram_yuzu
+
+SUMMARY
+- Website mirror files: 8 (4706179 bytes)
+- Website extra asset files: 237 (105793276 bytes)
+- Instagram archive files: 19 (1849757 bytes)
+- Website discovered URL fetches: 238 success, 55 failed/blocked
+- Instagram media images downloaded: 12
+- Instagram direct video files downloaded: 0
+
+KEY REPORT FILES
+- /workspace/archive/ARCHIVE_SUMMARY.json
+- /workspace/archive/website_discovered_urls.txt
+- /workspace/archive/website_asset_fetch_report.tsv
+- /workspace/archive/instagram_yuzu/web_profile_info.json
+- /workspace/archive/instagram_yuzu/posts_manifest.csv
+- /workspace/archive/instagram_yuzu/media_download_report.tsv
+- /workspace/archive/instagram_yuzu/video_download_report.tsv
+
+LIMITATIONS
+- Some Wix/Parastorage URLs are access-restricted (403/404) and cannot be mirrored anonymously.
+- Instagram public endpoints provide post metadata and image/thumbnail URLs, but direct post-detail endpoints returned 404 for video extraction in this environment.
