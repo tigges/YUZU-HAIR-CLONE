@@ -42,8 +42,15 @@ conceptButtons.forEach((button) => {
     if (selectedConcept === "b") {
       previewArea.innerHTML = `
         <h2>B - YUZU V1</h2>
-        <p>This page is intentionally empty for now.</p>
-        <div class="preview-box"><p>YUZU V1 workspace placeholder</p></div>
+        <p>Live root build embedded from main directory.</p>
+        <div class="preview-box" style="padding:0; min-height:420px;">
+          <iframe
+            src="/"
+            title="YUZU V1 Root Preview"
+            style="width:100%;height:100%;min-height:420px;border:0;"
+            loading="lazy"
+          ></iframe>
+        </div>
       `;
       return;
     }
